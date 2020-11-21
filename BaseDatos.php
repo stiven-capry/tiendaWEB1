@@ -1,3 +1,12 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseDatos</title>
+</head>
+<body>
 <?php  
 
 class BaseDatos{
@@ -67,3 +76,5 @@ public function buscarDatos($consultaSQL){
 }
 
 ?>
+</body>
+</html>

@@ -6,9 +6,10 @@
         
         //1. recibir datos:
         $nombre=$_POST["nombre"];
-        $apellido=$_POST["apellido"];
+        $marca=$_POST["marca"];
+        $precio=$_POST["precio"];
         $descripcion=$_POST["descripcion"];
-        $genero=$_POST["genero"];
+        
 
         //2. Crear un objeto de la clase BaseDatos
 
@@ -16,7 +17,7 @@
         $transaccion= new BaseDatos();
         
         //3.Crear la consulta SQL para agregar datos
-        $consultaSQL="INSERT INTO usuarios(nombre,apellido,descripcion,genero) VALUES ('$nombre','$apellido','$descripcion','$genero')";
+        $consultaSQL="INSERT INTO usuarios(nombre,marca,precio,descripcion) VALUES ('$nombre','$marca','$precio','$descripcion')";
 
         //4.LLamar al metodo agregarDatos     
         $transaccion->agregarDatos($consultaSQL);
