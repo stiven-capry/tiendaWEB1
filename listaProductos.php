@@ -44,10 +44,40 @@ $usuarios=$transaccion->buscarDatos($consultaSQL);
                         <h5 class="card-title"><?php echo($usuario["nombre"])?></h5>
                         <p class="card-text"><?php echo($usuario["descripcion"])?></p>
                         <a href="eliminarProducto.php?id=<?php echo($usuario["idUsuario"])?>" class="btn btn-secondary">Eliminar</a>
-                        <a type="button" class="btn btn-secondary">Editar</a>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editar<?php echo($usuario["idUsuario"])?>" >Editar</button>
                     </div>
                 </div>
             </div>    
+
+            <div class="modal fade" id="editar<?php echo($usuario["idUsuario"])?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edicion de producto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="editarProducto.phP?id=<?php echo($usuario["idUsuario"])?>" method="POST">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control" name="nombreEditar" value="<?php echo($usuario["nombre"])?>">                                    
+                                </div>
+                                <div class="form-group">
+                                    <label>Descripcion</label>
+                                    <textarea  class="form-control" name="descripcionEditar"> <?php echo($usuario["descripcion"])?></textarea>                                    
+                                </div>
+                                <button type="submit" class="btn btn-info" name="botonEditar">Editar</button>
+                            </form>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+
+
+
+
 
         <?php endforeach ?>
             
