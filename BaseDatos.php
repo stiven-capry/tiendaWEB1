@@ -73,6 +73,26 @@ public function buscarDatos($consultaSQL){
 
 }
 
+public function eliminarDatos($consultaSQL){
+     
+    //1. Conectarme a la BD
+    $conexionBD=$this->conectarBD();
+
+    //2. Preparar la consulta
+    $consultaEliminarDatos= $conexionBD->prepare($consultaSQL);
+ 
+    //3. Ejecutar la consulta
+    $resultado=$consultaEliminarDatos->execute();
+ 
+    //4. verifique el resultado
+    if($resultado){
+        echo("Registro eliminado con éxito");
+    }else{
+        echo("Error eliminando el registro");
+    }
+
+}
+
 }
 
 ?>

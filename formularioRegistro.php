@@ -42,6 +42,14 @@
                     </div>
                 </div>
                 <br>
+                <div class="row mt-3">
+                    
+                    <div class="col">
+                        <label class="font-weight-bold">Foto:</label>
+                        <input type="text" class="form-control" placeholder="Foto url" name="foto">
+                    </div>
+                </div>
+                <br> 
                 
                 <button type="submit" class="btn btn-info btn-block" name="botonEnvio">Registrar</button>
             </form>
