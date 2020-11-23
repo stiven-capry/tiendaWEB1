@@ -21,9 +21,9 @@
         $transaccion->editarDatos($consultaSQL);
 
         //6. redireccion
-        header("location:listaProducto.php")
+        header("location:listaProducto.php");
   
-    }
-
+    
+        }
 
 ?>

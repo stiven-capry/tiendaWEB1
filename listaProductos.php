@@ -59,7 +59,7 @@ $usuarios=$transaccion->buscarDatos($consultaSQL);
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="editarProducto.phP?id=<?php echo($usuario["idUsuario"])?>" method="POST">
+                            <form action="editarProducto.php?id=<?php echo($usuario["idUsuario"])?>" method="POST">
                                 <div class="form-group">
                                     <label>Nombre</label>
                                     <input type="text" class="form-control" name="nombreEditar" value="<?php echo($usuario["nombre"])?>">                                    
@@ -74,10 +74,6 @@ $usuarios=$transaccion->buscarDatos($consultaSQL);
                     </div>
                 </div>
             </div>
-
-
-
-
 
         <?php endforeach ?>
             
